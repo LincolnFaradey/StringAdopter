@@ -65,11 +65,9 @@
     size_t str_size = strlen(string);
     char *buffer = (char *)malloc(sizeof(char) * str_size * 2);
     for (int i = 0, j = 0; i < str_size; i++, j++) {
+        
         if (string[i] == '\"') buffer[j++] = '\\';
-        if (string[i] == '\n') {
-            buffer[j] = ' ';
-            continue;
-        }
+
         buffer[j] = string[i];
         
         switch (string[i]) {
@@ -79,6 +77,9 @@
             case '%':
                 buffer[++j] = '%';
                 break;
+            case '\n':
+                buffer[j] = ' ';
+                continue;
         }
         
     }
