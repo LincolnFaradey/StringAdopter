@@ -14,6 +14,9 @@
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 @property (weak) IBOutlet NSTextField *copiedLabel;
 
+- (NSString *)convert;
+- (void)animateTextAppearence;
+
 @end
 
 @implementation ViewController
@@ -48,12 +51,11 @@
             self.copiedLabel.stringValue = @"Copied to clipboard";
             self.view.layer.shadowColor = [NSColor colorWithCalibratedRed:0.078 green:0.400 blue:0.604 alpha:1].CGColor;
         }
-    } completionHandler:^{}];
+    } completionHandler:nil];
     
 }
 
-#pragma mark - Helper methods
-
+#pragma mark - Main functionality
 - (NSString *)convert
 {
     NSString *text = [[self.textView textStorage] string];
@@ -84,6 +86,7 @@
     return convertedString;
 }
 
+#pragma mark - Helper methods
 - (void)animateTextAppearence
 {
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
