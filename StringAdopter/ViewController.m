@@ -44,7 +44,7 @@
         }
     }
     NSString *convertedString = [NSString stringWithFormat:@"\"%%@%s\"", buffer];
-    NSLog(@"\"%%@%s\"", buffer);
+
     [[NSPasteboard generalPasteboard] clearContents];
     [[NSPasteboard generalPasteboard] setString:convertedString forType:NSStringPboardType];
     
