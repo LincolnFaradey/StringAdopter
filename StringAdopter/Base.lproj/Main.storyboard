@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87h" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D127a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -69,11 +68,11 @@
                                                 <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Open Recent" id="tXI-mr-wws">
+                                        <menuItem title="Recent" id="tXI-mr-wws">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
+                                            <menu key="submenu" title="Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
                                                 <items>
-                                                    <menuItem title="Clear Menu" id="vNY-rz-j42">
+                                                    <menuItem title="Clear Menu" state="on" id="vNY-rz-j42">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
                                                             <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="Daa-9d-B3U"/>
@@ -83,34 +82,6 @@
                                             </menu>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
-                                        <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
-                                            <connections>
-                                                <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
-                                            <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="teZ-XB-qJY"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
-                                            <connections>
-                                                <action selector="saveDocumentAs:" target="Ady-hI-5gd" id="mDf-zr-I0C"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Revert to Saved" id="KaW-ft-85H">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="revertDocumentToSaved:" target="Ady-hI-5gd" id="iJ3-Pv-kwq"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
-                                        <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
-                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
                                             <connections>
                                                 <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
@@ -642,7 +613,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+                    <connections>
+                        <outlet property="recentMenu" destination="bib-Uj-vzu" id="F4I-Q1-Vtt"/>
+                    </connections>
+                </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -651,10 +626,10 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="String Adapter" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="644" y="381" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -670,11 +645,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="248"/>
+                        <rect key="frame" x="0.0" y="0.0" width="472" height="249"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-pS-DOi">
-                                <rect key="frame" x="20" y="93" width="440" height="135"/>
+                                <rect key="frame" x="20" y="41" width="432" height="174"/>
                                 <clipView key="contentView" id="bBt-f9-Qjw">
                                     <rect key="frame" x="1" y="1" width="223" height="133"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -683,18 +658,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="223" height="135"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="440" height="135"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <size key="minSize" width="432" height="174"/>
+                                            <size key="maxSize" width="619" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="440" height="135"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <size key="minSize" width="432" height="174"/>
+                                            <size key="maxSize" width="619" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.97254908084869385" green="0.21568629145622253" blue="0.12156863510608673" alpha="1" colorSpace="deviceRGB"/>
                                 </clipView>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="n9V-pS-DOi" secondAttribute="height" multiplier="88:27" id="Bc8-qS-rrv"/>
-                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="51p-UV-oht">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -705,7 +677,7 @@
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vam-xl-Hym">
-                                <rect key="frame" x="196" y="45" width="89" height="32"/>
+                                <rect key="frame" x="192" y="8" width="89" height="32"/>
                                 <buttonCell key="cell" type="push" title="Convert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EFJ-7C-rcd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -715,22 +687,43 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oty-G1-5Cl">
-                                <rect key="frame" x="149" y="20" width="182" height="24"/>
+                                <rect key="frame" x="145" y="116" width="182" height="24"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copied to clipboard" id="dqs-gj-QqS">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="41E-S4-TMk">
+                                <rect key="frame" x="332" y="219" width="137" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="BzK-fg-7c9"/>
+                                </constraints>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" drawsBackground="YES" numberOfVisibleItems="2" id="V97-DG-aO1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Objective-C</string>
+                                        <string>C lang</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                                <connections>
+                                    <action selector="chooseLanguage:" target="XfG-lQ-9wD" id="IrK-9Y-ODB"/>
+                                </connections>
+                            </comboBox>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Vam-xl-Hym" firstAttribute="top" secondItem="n9V-pS-DOi" secondAttribute="bottom" constant="20" id="8tm-xC-r8a"/>
-                            <constraint firstItem="oty-G1-5Cl" firstAttribute="top" secondItem="Vam-xl-Hym" secondAttribute="bottom" constant="8" id="FdE-wU-rVh"/>
-                            <constraint firstAttribute="centerX" secondItem="Vam-xl-Hym" secondAttribute="centerX" constant="-0.5" id="Iz4-KL-1zZ"/>
-                            <constraint firstAttribute="centerX" secondItem="oty-G1-5Cl" secondAttribute="centerX" constant="-0.5" id="glK-A8-yqR"/>
-                            <constraint firstItem="n9V-pS-DOi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="iH7-lS-9gA"/>
-                            <constraint firstItem="n9V-pS-DOi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="r0a-Nm-9Lj"/>
-                            <constraint firstAttribute="trailing" secondItem="n9V-pS-DOi" secondAttribute="trailing" constant="20" id="rAQ-kz-RIG"/>
+                            <constraint firstItem="n9V-pS-DOi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="3Cy-oG-hL5"/>
+                            <constraint firstAttribute="centerY" secondItem="oty-G1-5Cl" secondAttribute="centerY" constant="3.5" id="7lM-Jm-7Y1"/>
+                            <constraint firstAttribute="trailing" secondItem="41E-S4-TMk" secondAttribute="trailing" constant="6" id="Auw-NS-OTf"/>
+                            <constraint firstItem="41E-S4-TMk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="9" id="F2D-O5-SKi"/>
+                            <constraint firstAttribute="trailing" secondItem="n9V-pS-DOi" secondAttribute="trailing" constant="20" id="Hpe-4s-WYy"/>
+                            <constraint firstItem="n9V-pS-DOi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="34" id="NTO-Pb-w4I"/>
+                            <constraint firstItem="Vam-xl-Hym" firstAttribute="top" secondItem="n9V-pS-DOi" secondAttribute="bottom" constant="5" id="aYi-w3-zbn"/>
+                            <constraint firstAttribute="centerX" secondItem="Vam-xl-Hym" secondAttribute="centerX" constant="-0.5" id="ebC-q7-gFG"/>
+                            <constraint firstAttribute="bottom" secondItem="n9V-pS-DOi" secondAttribute="bottom" constant="41" id="zEO-t2-FcF"/>
+                            <constraint firstAttribute="centerX" secondItem="oty-G1-5Cl" secondAttribute="centerX" id="zsP-Ke-N7h"/>
                         </constraints>
                         <shadow key="shadow" blurRadius="3">
                             <color key="color" red="0.14901961389999999" green="0.72156864399999998" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
@@ -738,12 +731,13 @@
                     </view>
                     <connections>
                         <outlet property="copiedLabel" destination="oty-G1-5Cl" id="eqk-k0-0ZZ"/>
+                        <outlet property="languageComboBox" destination="41E-S4-TMk" id="xem-ou-Zj5"/>
                         <outlet property="textView" destination="dVV-i2-4LT" id="Fe1-1P-0KS"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="644"/>
+            <point key="canvasLocation" x="71" y="634.5"/>
         </scene>
     </scenes>
 </document>

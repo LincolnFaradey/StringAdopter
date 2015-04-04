@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7FD0BDDD1AC7A68300C8855B /* StringAdopter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringAdopter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD0BDDD1AC7A68300C8855B /* StringAdapter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringAdapter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD0BDE11AC7A68300C8855B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD0BDE21AC7A68300C8855B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FD0BDE31AC7A68300C8855B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		7FD0BDE81AC7A68300C8855B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7FD0BDEA1AC7A68300C8855B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7FD0BDED1AC7A68300C8855B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7FD0BDF31AC7A68400C8855B /* StringAdopterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringAdopterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD0BDF31AC7A68400C8855B /* StringAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD0BDF81AC7A68400C8855B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD0BDF91AC7A68400C8855B /* StringAdopterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringAdopterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +61,8 @@
 		7FD0BDD41AC7A68300C8855B = {
 			isa = PBXGroup;
 			children = (
-				7FD0BDDF1AC7A68300C8855B /* StringAdopter */,
-				7FD0BDF61AC7A68400C8855B /* StringAdopterTests */,
+				7FD0BDDF1AC7A68300C8855B /* StringAdapter */,
+				7FD0BDF61AC7A68400C8855B /* StringAdapterTests */,
 				7FD0BDDE1AC7A68300C8855B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 		7FD0BDDE1AC7A68300C8855B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7FD0BDDD1AC7A68300C8855B /* StringAdopter.app */,
-				7FD0BDF31AC7A68400C8855B /* StringAdopterTests.xctest */,
+				7FD0BDDD1AC7A68300C8855B /* StringAdapter.app */,
+				7FD0BDF31AC7A68400C8855B /* StringAdapterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7FD0BDDF1AC7A68300C8855B /* StringAdopter */ = {
+		7FD0BDDF1AC7A68300C8855B /* StringAdapter */ = {
 			isa = PBXGroup;
 			children = (
 				7FD0BDE21AC7A68300C8855B /* AppDelegate.h */,
@@ -87,6 +87,7 @@
 				7FD0BDEC1AC7A68300C8855B /* Main.storyboard */,
 				7FD0BDE01AC7A68300C8855B /* Supporting Files */,
 			);
+			name = StringAdapter;
 			path = StringAdopter;
 			sourceTree = "<group>";
 		};
@@ -99,12 +100,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7FD0BDF61AC7A68400C8855B /* StringAdopterTests */ = {
+		7FD0BDF61AC7A68400C8855B /* StringAdapterTests */ = {
 			isa = PBXGroup;
 			children = (
 				7FD0BDF91AC7A68400C8855B /* StringAdopterTests.m */,
 				7FD0BDF71AC7A68400C8855B /* Supporting Files */,
 			);
+			name = StringAdapterTests;
 			path = StringAdopterTests;
 			sourceTree = "<group>";
 		};
@@ -119,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7FD0BDDC1AC7A68300C8855B /* StringAdopter */ = {
+		7FD0BDDC1AC7A68300C8855B /* StringAdapter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FD0BDFD1AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdopter" */;
+			buildConfigurationList = 7FD0BDFD1AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdapter" */;
 			buildPhases = (
 				7FD0BDD91AC7A68300C8855B /* Sources */,
 				7FD0BDDA1AC7A68300C8855B /* Frameworks */,
@@ -131,14 +133,14 @@
 			);
 			dependencies = (
 			);
-			name = StringAdopter;
+			name = StringAdapter;
 			productName = StringAdopter;
-			productReference = 7FD0BDDD1AC7A68300C8855B /* StringAdopter.app */;
+			productReference = 7FD0BDDD1AC7A68300C8855B /* StringAdapter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7FD0BDF21AC7A68400C8855B /* StringAdopterTests */ = {
+		7FD0BDF21AC7A68400C8855B /* StringAdapterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FD0BE001AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdopterTests" */;
+			buildConfigurationList = 7FD0BE001AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdapterTests" */;
 			buildPhases = (
 				7FD0BDEF1AC7A68400C8855B /* Sources */,
 				7FD0BDF01AC7A68400C8855B /* Frameworks */,
@@ -149,9 +151,9 @@
 			dependencies = (
 				7FD0BDF51AC7A68400C8855B /* PBXTargetDependency */,
 			);
-			name = StringAdopterTests;
+			name = StringAdapterTests;
 			productName = StringAdopterTests;
-			productReference = 7FD0BDF31AC7A68400C8855B /* StringAdopterTests.xctest */;
+			productReference = 7FD0BDF31AC7A68400C8855B /* StringAdapterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7FD0BDD81AC7A68300C8855B /* Build configuration list for PBXProject "StringAdopter" */;
+			buildConfigurationList = 7FD0BDD81AC7A68300C8855B /* Build configuration list for PBXProject "StringAdapter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7FD0BDDC1AC7A68300C8855B /* StringAdopter */,
-				7FD0BDF21AC7A68400C8855B /* StringAdopterTests */,
+				7FD0BDDC1AC7A68300C8855B /* StringAdapter */,
+				7FD0BDF21AC7A68400C8855B /* StringAdapterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +236,7 @@
 /* Begin PBXTargetDependency section */
 		7FD0BDF51AC7A68400C8855B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7FD0BDDC1AC7A68300C8855B /* StringAdopter */;
+			target = 7FD0BDDC1AC7A68300C8855B /* StringAdapter */;
 			targetProxy = 7FD0BDF41AC7A68400C8855B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -334,7 +336,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StringAdopter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/faradey/Desktop/PXCRealSense,
+				);
+				PRODUCT_NAME = StringAdapter;
 			};
 			name = Debug;
 		};
@@ -345,7 +351,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StringAdopter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/faradey/Desktop/PXCRealSense,
+				);
+				PRODUCT_NAME = StringAdapter;
 			};
 			name = Release;
 		};
@@ -364,7 +374,7 @@
 				);
 				INFOPLIST_FILE = StringAdopterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StringAdapterTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StringAdopter.app/Contents/MacOS/StringAdopter";
 			};
 			name = Debug;
@@ -380,7 +390,7 @@
 				);
 				INFOPLIST_FILE = StringAdopterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StringAdapterTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StringAdopter.app/Contents/MacOS/StringAdopter";
 			};
 			name = Release;
@@ -388,7 +398,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7FD0BDD81AC7A68300C8855B /* Build configuration list for PBXProject "StringAdopter" */ = {
+		7FD0BDD81AC7A68300C8855B /* Build configuration list for PBXProject "StringAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FD0BDFB1AC7A68400C8855B /* Debug */,
@@ -397,21 +407,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FD0BDFD1AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdopter" */ = {
+		7FD0BDFD1AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FD0BDFE1AC7A68400C8855B /* Debug */,
 				7FD0BDFF1AC7A68400C8855B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		7FD0BE001AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdopterTests" */ = {
+		7FD0BE001AC7A68400C8855B /* Build configuration list for PBXNativeTarget "StringAdapterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7FD0BE011AC7A68400C8855B /* Debug */,
 				7FD0BE021AC7A68400C8855B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

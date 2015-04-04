@@ -13,6 +13,9 @@
 
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 @property (weak) IBOutlet NSTextField *copiedLabel;
+@property (weak) IBOutlet NSComboBox *languageComboBox;
+
+- (IBAction)chooseLanguage:(NSComboBox *)sender;
 
 - (NSString *)convert;
 - (void)animateTextAppearence;
@@ -27,6 +30,8 @@
 
     self.copiedLabel.alphaValue = 0.0;
     self.textView.delegate = self;
+    [_languageComboBox selectItemAtIndex:0];
+
 }
 
 #pragma mark - IBActions
@@ -51,41 +56,29 @@
             self.copiedLabel.stringValue = @"Copied to clipboard";
             self.view.layer.shadowColor = [NSColor colorWithCalibratedRed:0.078 green:0.400 blue:0.604 alpha:1].CGColor;
         }
+        
     } completionHandler:nil];
-    
 }
 
 #pragma mark - Main functionality
+- (IBAction)chooseLanguage:(NSComboBox *)sender {
+}
+
 - (NSString *)convert
 {
     NSString *text = [[self.textView textStorage] string];
     
-    const char *string = [text UTF8String];
+    text = [text stringByReplacingOccurrencesOfString:@"\\" withString:@"\\\\"];
+    text = [text stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
+    text = [text stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+    text = [text stringByReplacingOccurrencesOfString:@"%%" withString:@"%%%%"];
     
-    size_t str_size = strlen(string);
-    char *buffer = (char *)malloc(sizeof(char) * str_size * 2);
-    for (int i = 0, j = 0; i < str_size; i++, j++) {
-        
-        if (string[i] == '\"') buffer[j++] = '\\';
-
-        buffer[j] = string[i];
-        
-        switch (string[i]) {
-            case '\\':
-                buffer[++j] = '\\';
-                break;
-            case '%':
-                buffer[++j] = '%';
-                break;
-            case '\n':
-                buffer[j] = ' ';
-                continue;
+    NSString *convertedString;
+        if (self.languageComboBox.indexOfSelectedItem == 0) {
+            convertedString = [NSString stringWithFormat:@"@\"%@\"", text];
+        }else {
+            convertedString = [NSString stringWithFormat:@"\"%@\"", text];
         }
-        
-    }
-
-    NSString *convertedString = [NSString stringWithFormat:@"@\"%s\"", buffer];
-    free(buffer);
     
     return convertedString;
 }

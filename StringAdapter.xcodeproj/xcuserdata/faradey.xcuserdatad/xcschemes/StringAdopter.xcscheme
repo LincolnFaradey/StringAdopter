@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7FD0BDDC1AC7A68300C8855B"
-               BuildableName = "StringAdopter.app"
-               BlueprintName = "StringAdopter"
-               ReferencedContainer = "container:StringAdopter.xcodeproj">
+               BuildableName = "StringAdapter.app"
+               BlueprintName = "StringAdapter"
+               ReferencedContainer = "container:StringAdapter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7FD0BDF21AC7A68400C8855B"
-               BuildableName = "StringAdopterTests.xctest"
-               BlueprintName = "StringAdopterTests"
-               ReferencedContainer = "container:StringAdopter.xcodeproj">
+               BuildableName = "StringAdapterTests.xctest"
+               BlueprintName = "StringAdapterTests"
+               ReferencedContainer = "container:StringAdapter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7FD0BDF21AC7A68400C8855B"
-               BuildableName = "StringAdopterTests.xctest"
-               BlueprintName = "StringAdopterTests"
-               ReferencedContainer = "container:StringAdopter.xcodeproj">
+               BuildableName = "StringAdapterTests.xctest"
+               BlueprintName = "StringAdapterTests"
+               ReferencedContainer = "container:StringAdapter.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FD0BDDC1AC7A68300C8855B"
-            BuildableName = "StringAdopter.app"
-            BlueprintName = "StringAdopter"
-            ReferencedContainer = "container:StringAdopter.xcodeproj">
+            BuildableName = "StringAdapter.app"
+            BlueprintName = "StringAdapter"
+            ReferencedContainer = "container:StringAdapter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FD0BDDC1AC7A68300C8855B"
-            BuildableName = "StringAdopter.app"
-            BlueprintName = "StringAdopter"
-            ReferencedContainer = "container:StringAdopter.xcodeproj">
+            BuildableName = "StringAdapter.app"
+            BlueprintName = "StringAdapter"
+            ReferencedContainer = "container:StringAdapter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FD0BDDC1AC7A68300C8855B"
-            BuildableName = "StringAdopter.app"
-            BlueprintName = "StringAdopter"
-            ReferencedContainer = "container:StringAdopter.xcodeproj">
+            BuildableName = "StringAdapter.app"
+            BlueprintName = "StringAdapter"
+            ReferencedContainer = "container:StringAdapter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
